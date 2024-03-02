@@ -4,13 +4,13 @@ fig是一个轻量化的配置读取工具
 
 ## 安装
 ```
-go get github.com/xfali/fig
+go get github.com/ydx1011/yfig
 ```
 
 ## 使用
 ### 加载配置内容
 ```
-config := fig.New()
+config := yfig.New()
 err := config.ReadValue(strings.NewReader(test_ctx_str))
 if err != nil {
     b.Fatal(err)
@@ -18,11 +18,11 @@ if err != nil {
 ```
 或者
 ```
-config, err := fig.LoadJsonFile("config.json")
+config, err := yfig.LoadJsonFile("config.json")
 if err != nil {
     t.Fatal(err)
 }
-config, err := fig.LoadYamlFile("config.yaml")
+config, err := yfig.LoadYamlFile("config.yaml")
 if err != nil {
     t.Fatal(err)
 }
@@ -69,11 +69,11 @@ DataSources:
 
 用法：
 ```
-config, _ := fig.LoadJsonFile("config.json")
+config, _ := yfig.LoadJsonFile("config.json")
 
-v := fig.GetBool(config)("LogResponse", false)
+v := yfig.GetBool(config)("LogResponse", false)
 
-floatValue := fig.GetFloat32(config)("Value.float", 0)
+floatValue := yfig.GetFloat32(config)("Value.float", 0)
 ```
 
 ## tag

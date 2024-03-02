@@ -1,4 +1,4 @@
-module yfig
+module github.com/ydx1011/yfig
 
 go 1.18
 
