@@ -223,7 +223,7 @@ func (v *JsonReader) Read(r io.Reader) (*Value, error) {
 	}
 
 	ret := Value{}
-	logf("value: %s\n", buf.String())
+	//logf("value: %s\n", buf.String())
 	err = json.Unmarshal(buf.Bytes(), &ret)
 	if err != nil {
 		return nil, err
