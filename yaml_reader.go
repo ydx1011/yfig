@@ -27,7 +27,7 @@ func (v *YamlReader) Read(r io.Reader) (*Value, error) {
 	}
 
 	ret := Value{}
-	logf("value: %s\n", buf.String())
+	//logf("value: %s\n", buf.String())
 	err = yaml.Unmarshal(buf.Bytes(), &ret)
 	if err != nil {
 		return nil, err
